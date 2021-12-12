@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM archlinux/archlinux:latest
 
 LABEL maintainer="Michael Hofer <karras@0x539.ch>"
 
