@@ -13,6 +13,7 @@ on:
 env:
   IMAGE_NAME: archlinux-ansible-testing
 
+# Kudos to https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows
 jobs:
   publish:
     runs-on: ubuntu-20.04
