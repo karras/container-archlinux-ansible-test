@@ -1,4 +1,4 @@
-# Arch Linux Container Image - Ansible Testing
+# Container Image - Arch Linux Ansible Testing
 
 An extended Arch Linux container base image with the goal to be used together
 with [Molecule](https://github.com/ansible-community/molecule) in order to test
