@@ -6,10 +6,10 @@ LABEL org.opencontainers.image.title="Arch Linux Ansible Testing"
 LABEL org.opencontainers.image.description="Arch Linux container image for testing Ansible roles, playbooks and collections."
 LABEL org.opencontainers.image.base.name="docker.io/archlinux/archlinux:latest"
 
-# See also https://systemd.io/CONTAINER_INTERFACE/
+# See also https://systemd.io/CONTAINER_INTERFACE
 ENV container docker
 
-# Install Systemd
+# Install systemd
 # Adopted from https://developers.redhat.com/blog/2014/05/05/running-systemd-within-docker-container
 RUN pacman -Sy --noconfirm systemd-sysvcompat \
     && pacman -Scc --noconfirm \
@@ -21,12 +21,12 @@ RUN pacman -Sy --noconfirm systemd-sysvcompat \
     && rm -f /lib/systemd/system/sockets.target.wants/*initctl* \
     && rm -f /etc/systemd/system/*.wants/*
 
-# Install Python for Ansible
+# Install python for Ansible
 RUN pacman -Sy --noconfirm python \
     && pacman -Scc --noconfirm
 
-# Required by Systemd
+# Required by systemd
 VOLUME [ "/sys/fs/cgroup" ]
 
-# Execute Systemd at start
+# Execute systemd at start
 CMD ["/sbin/init"]
