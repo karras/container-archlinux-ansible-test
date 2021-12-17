@@ -12,7 +12,7 @@ ENV container docker
 # Install systemd
 # Adopted from https://developers.redhat.com/blog/2014/05/05/running-systemd-within-docker-container
 RUN pacman -Sy --noconfirm systemd-sysvcompat \
-    && pacman -Scc --noconfirm \
+    && yes|pacman -Scc \
     && (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done) \
     && rm -f /lib/systemd/system/basic.target.wants/*           \
     && rm -f /lib/systemd/system/multi-user.target.wants/*      \
@@ -23,7 +23,7 @@ RUN pacman -Sy --noconfirm systemd-sysvcompat \
 
 # Install python for Ansible
 RUN pacman -Sy --noconfirm python \
-    && pacman -Scc --noconfirm
+    && yes|pacman -Scc
 
 # Required by systemd
 VOLUME [ "/sys/fs/cgroup" ]
