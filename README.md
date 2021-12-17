@@ -15,7 +15,15 @@ The following customizations are added on top of the Arch Linux base image:
 
 ## Usage
 
-TODO
+Run the container as follows:
+
+```sh
+podman run \
+  --tty \
+  --privileged \
+  --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
+  ghcr.io/karras/archlinux-ansible-testing
+```
 
 ## License
 
