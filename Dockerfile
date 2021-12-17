@@ -26,7 +26,7 @@ RUN pacman -Sy --noconfirm python \
     && yes|pacman -Scc
 
 # Required by systemd
-VOLUME [ "/sys/fs/cgroup" ]
+VOLUME ["/sys/fs/cgroup"]
 
 # Execute systemd at start
 CMD ["/sbin/init"]
