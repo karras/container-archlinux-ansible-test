@@ -1,10 +1,11 @@
-# Container Image - Arch Linux Ansible Testing
+# Container Image - Arch Linux Ansible Test
 
-An extended Arch Linux container base image with the goal to be used together
-with [Molecule](https://github.com/ansible-community/molecule) in order to test
-Ansible roles, playbooks or collections.
+Arch Linux container image for testing Ansible roles, playbooks and collections.
 
-![GitHub](https://github.com/karras/container-archlinux-ansible-testing/workflows/Publish/badge.svg?branch=main)
+The main idea is to use it in combination with
+[Molecule](https://github.com/ansible-community/molecule).
+
+![GitHub](https://github.com/karras/container-archlinux-ansible-test/workflows/Publish/badge.svg?branch=main)
 
 ## Customizations
 
@@ -22,7 +23,7 @@ podman run \
   --tty \
   --privileged \
   --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
-  ghcr.io/karras/archlinux-ansible-testing
+  ghcr.io/karras/archlinux-ansible-test
 ```
 
 ## License

@@ -1,8 +1,8 @@
 FROM archlinux/archlinux:latest
 
 LABEL org.opencontainers.image.authors="Michael Hofer <karras@0x539.ch>"
-LABEL org.opencontainers.image.source="https://github.com/karras/container-archlinux-ansible-testing"
-LABEL org.opencontainers.image.title="Arch Linux Ansible Testing"
+LABEL org.opencontainers.image.source="https://github.com/karras/container-archlinux-ansible-test"
+LABEL org.opencontainers.image.title="Arch Linux Ansible Test"
 LABEL org.opencontainers.image.description="Arch Linux container image for testing Ansible roles, playbooks and collections."
 LABEL org.opencontainers.image.base.name="docker.io/archlinux/archlinux:latest"
 
