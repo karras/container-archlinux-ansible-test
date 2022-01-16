@@ -5,7 +5,7 @@ Arch Linux container image for testing Ansible roles, playbooks and collections.
 The main idea is to use it in combination with
 [Molecule](https://github.com/ansible-community/molecule).
 
-![GitHub](https://github.com/karras/container-archlinux-ansible-test/workflows/Publish/badge.svg?branch=main)
+[![Publish](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/publish.yml/badge.svg)](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/publish.yml)
 
 ## Customizations
 
