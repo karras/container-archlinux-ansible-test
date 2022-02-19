@@ -9,9 +9,13 @@ LABEL org.opencontainers.image.base.name="docker.io/archlinux/archlinux:latest"
 # See also https://systemd.io/CONTAINER_INTERFACE
 ENV container docker
 
+# Update all packages
+RUN pacman -Syu --noconfirm \
+    && yes|pacman -Scc
+
 # Install systemd
 # Adopted from https://developers.redhat.com/blog/2014/05/05/running-systemd-within-docker-container
-RUN pacman -Syu --noconfirm systemd-sysvcompat \
+RUN pacman -S --noconfirm systemd-sysvcompat \
     && yes|pacman -Scc \
     && (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done) \
     && rm -f /lib/systemd/system/basic.target.wants/*           \
@@ -22,7 +26,7 @@ RUN pacman -Syu --noconfirm systemd-sysvcompat \
     && rm -f /etc/systemd/system/*.wants/*
 
 # Install python for Ansible
-RUN pacman -Syu --noconfirm python \
+RUN pacman -S --noconfirm python \
     && yes|pacman -Scc
 
 # Required by systemd
