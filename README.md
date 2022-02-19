@@ -5,7 +5,7 @@ Arch Linux container image for testing Ansible roles, playbooks and collections.
 The main idea is to use it in combination with
 [Molecule](https://github.com/ansible-community/molecule).
 
-[![Publish](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/publish.yml/badge.svg)](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/publish.yml)
+[![Build & Publish](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/build-publish.yml/badge.svg)](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/build-publish.yml)
 
 ## Customizations
 
@@ -26,8 +26,9 @@ podman run \
   ghcr.io/karras/archlinux-ansible-test
 ```
 
-All available labels can be found in the
+All available tags can be found in the
 [registry](https://github.com/karras/container-archlinux-ansible-test/pkgs/container/archlinux-ansible-test).
+The `latest` tag is updated on a weekly basis each Friday.
 
 ## License
 
