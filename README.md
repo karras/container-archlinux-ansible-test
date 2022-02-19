@@ -26,6 +26,9 @@ podman run \
   ghcr.io/karras/archlinux-ansible-test
 ```
 
+All available labels can be found in the
+[registry](https://github.com/karras/container-archlinux-ansible-test/pkgs/container/archlinux-ansible-test).
+
 ## License
 
 See [LICENSE](./LICENSE)
