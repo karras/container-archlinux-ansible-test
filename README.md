@@ -7,6 +7,11 @@ The main idea is to use it in combination with
 
 [![Build & Publish](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/build-publish.yml/badge.svg)](https://github.com/karras/container-archlinux-ansible-test/actions/workflows/build-publish.yml)
 
+## Why
+
+Testing Arch-related Ansible roles and playbooks in an Arch container helps
+identifying issues and regressions early.
+
 ## Customizations
 
 The following customizations are added on top of the Arch Linux base image:
